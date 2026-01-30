@@ -42,7 +42,7 @@ body{
   background-size: 230%;
 
   transform: rotate(0deg);
-  transition: transform 120ms linear;
+  transition: none;
   filter: drop-shadow(0 0 18px rgba(70,255,123,.18)) saturate(1.2);
 
   /* ✅ aqui está o segredo: só mostra uma coroa, esconde o centro */
