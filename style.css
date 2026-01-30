@@ -1,136 +1,192 @@
-*{box-sizing:border-box}
-body{
-  margin:0; height:100vh;
-  display:grid; place-items:center;
-  background:#050607; color:#46ff7b;
-  font-family:system-ui,Segoe UI,Roboto,Arial;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.omnitrix{
-  position:relative;
-  width:min(90vw,360px);
-  aspect-ratio:1/1;
-  border-radius:50%;
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.alien-ring{
-  position:absolute;
+body {
+  margin: 0;
+  height: 100vh;
+  height: -webkit-fill-available;
+  display: grid;
+  place-items: center;
+  background: #050607;
+  color: #46ff7b;
+  font-family: system-ui, Segoe UI, Roboto, Arial;
+  touch-action: none;
+  overscroll-behavior: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* iOS Safari height fix */
+@supports (-webkit-touch-callout: none) {
+  body {
+    height: -webkit-fill-available;
+  }
+}
+
+.omni {
+  position: relative;
+  width: 85vmin;
+  height: 85vmin;
+  max-width: 360px;
+  max-height: 360px;
+  min-width: 280px;
+  min-height: 280px;
+  border-radius: 50%;
+}
+
+.alien-ring {
+  position: absolute;
   inset: 2%;
-  border-radius:50%;
-  pointer-events:none;
+  border-radius: 50%;
+  pointer-events: none;
 }
 
-.ring{
-  position:absolute; inset:0;
-  border-radius:50%;
-  border:4px solid rgba(70,255,123,.5);
-  box-shadow:0 0 25px rgba(70,255,123,.18);
-}
-
-.dial{
-  position:absolute;
+.ring {
+  position: absolute;
   inset: 0;
-  border-radius:50%;
+  border-radius: 50%;
+  border: 4px solid rgba(70, 255, 123, 0.5);
+  box-shadow: 0 0 25px rgba(70, 255, 123, 0.18);
+  background: radial-gradient(circle, rgba(0, 0, 0, 0) 0 55%, rgba(70, 255, 123, 0.08) 70% 100%);
+}
+
+.dial {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
   background-image: url("./images/icones_15_Rotados.png");
   background-repeat: no-repeat;
   background-position: 52.5% 53%;
   background-size: 230%;
   transform: rotate(0deg);
   transition: none;
-  filter: drop-shadow(0 0 18px rgba(70,255,123,.18)) saturate(1.2);
+  filter: drop-shadow(0 0 18px rgba(70, 255, 123, 0.18)) saturate(1.2);
   -webkit-mask: radial-gradient(circle, transparent 0 20%, #000 25% 100%);
-          mask: radial-gradient(circle, transparent 0 20%, #000 25% 100%);
+  mask: radial-gradient(circle, transparent 0 20%, #000 25% 100%);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
-.dial::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  border-radius:50%;
+.dial::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
   background: repeating-linear-gradient(
     to bottom,
-    rgba(70,255,123,.10) 0 1px,
-    rgba(0,0,0,0) 2px 6px
+    rgba(70, 255, 123, 0.10) 0 1px,
+    rgba(0, 0, 0, 0) 2px 6px
   );
   mix-blend-mode: screen;
   opacity: .18;
-  pointer-events:none;
+  pointer-events: none;
 }
 
-.touch{
-  position:absolute;
-  inset:26%;
-  border-radius:50%;
-  border:2px solid rgba(70,255,123,.45);
-  background: rgba(70,255,123,.08);
+.touch {
+  position: absolute;
+  inset: 26%;
+  border-radius: 50%;
+  border: 3px solid rgba(70, 255, 123, 0.85);
+  background: rgba(70, 255, 123, 0.08);
   touch-action: none;
-  user-select: none;
+  -webkit-touch-callout: none;
   -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  z-index: 3;
 }
 
-.omnitrix.selecting .dial{
-  box-shadow:0 0 18px rgba(70,255,123,.22);
-}
-.omnitrix.selected .touch{
-  border-color: rgba(70,255,123,.9);
-  box-shadow:0 0 22px rgba(70,255,123,.20);
+.omni.selecting .dial {
+  box-shadow: 0 0 18px rgba(70, 255, 123, 0.22);
 }
 
-.ring { z-index: 1; }
-.alien-ring { z-index: 2; }
-.touch { z-index: 3; }
-
-.touch{
-  border: 3px solid rgba(70,255,123,.85);
+.omni.selected .touch {
+  border-color: rgba(70, 255, 123, 0.9);
+  box-shadow: 0 0 22px rgba(70, 255, 123, 0.20);
 }
 
-.ring{
-  background: radial-gradient(circle, rgba(0,0,0,0) 0 55%, rgba(70,255,123,.08) 70% 100%);
+.ring {
+  z-index: 1;
 }
 
+.alien-ring {
+  z-index: 2;
+}
 
+.touch {
+  z-index: 3;
+}
 
-.select-window{
-  position:absolute;
-  left:50%;
+.select-window {
+  position: absolute;
+  left: 50%;
   top: 3.8%;
   transform: translateX(-50%);
   width: 28%;
   height: 22%;
   clip-path: polygon(
-    8% 0%, 92% 0%,
-    66% 100%, 34% 100%
+    8% 0%,
+    92% 0%,
+    66% 100%,
+    34% 100%
   );
   background: linear-gradient(
     to bottom,
-    rgba(70,255,123,0.35),
-    rgba(70,255,123,0.06)
+    rgba(70, 255, 123, 0.35),
+    rgba(70, 255, 123, 0.06)
   );
   box-shadow:
-    0 0 18px rgba(70,255,123,0.25),
-    0 0 34px rgba(70,255,123,0.12);
+    0 0 18px rgba(70, 255, 123, 0.25),
+    0 0 34px rgba(70, 255, 123, 0.12);
   z-index: 6;
   pointer-events: none;
   backdrop-filter: blur(0.5px);
+  -webkit-backdrop-filter: blur(0.5px);
   -webkit-mask: linear-gradient(
     to bottom,
     transparent 0%,
-    rgba(0,0,0,0.6) 20%,
+    rgba(0, 0, 0, 0.6) 20%,
     #000 40%,
     #000 100%
   );
   mask: linear-gradient(
     to bottom,
     transparent 0%,
-    rgba(0,0,0,0.6) 20%,
+    rgba(0, 0, 0, 0.6) 20%,
     #000 40%,
     #000 100%
   );
 }
 
-/* Fundo do Omnitrix */
-.omnitrix-bg{
+.omni {
+  position: relative;
+  z-index: 0;
+}
+
+.omni-bg {
   position: absolute;
   inset: 0;
   background-image: url("./images/omnitrix_de_frente.png");
@@ -140,20 +196,87 @@ body{
   opacity: 0.35;
   pointer-events: none;
   z-index: -1;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
-/* Estado TRANSFORMED */
-.omnitrix.transformed .touch {
+.omni.transformed .touch {
   border-color: rgba(255, 70, 123, 0.9);
   background: rgba(255, 70, 123, 0.15);
   box-shadow: 0 0 30px rgba(255, 70, 123, 0.3);
 }
 
-.omnitrix.transformed .ring {
+.omni.transformed .ring {
   border-color: rgba(255, 70, 123, 0.7);
   box-shadow: 0 0 30px rgba(255, 70, 123, 0.25);
 }
 
-.omnitrix.transformed .dial {
+.omni.transformed .dial {
   filter: drop-shadow(0 0 25px rgba(255, 70, 123, 0.4)) saturate(1.5);
+}
+
+.omni.transformed .select-window {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 70, 123, 0.4),
+    rgba(255, 70, 123, 0.1)
+  );
+  box-shadow:
+    0 0 25px rgba(255, 70, 123, 0.35),
+    0 0 40px rgba(255, 70, 123, 0.15);
+}
+
+/* Prevent text selection on mobile */
+*:not(input):not(textarea) {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Fix for Safari border-radius overflow */
+.omni,
+.alien-ring,
+.dial,
+.touch {
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+/* Performance optimizations */
+.dial {
+  will-change: transform;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Portrait mode adjustments */
+@media (orientation: portrait) {
+  .omni {
+    width: 80vmin;
+    height: 80vmin;
+  }
+}
+
+/* Landscape mode adjustments */
+@media (orientation: landscape) {
+  .omni {
+    width: 70vmin;
+    height: 70vmin;
+  }
+}
+
+/* Very small screens */
+@media (max-height: 600px) {
+  .omni {
+    width: 75vmin;
+    height: 75vmin;
+  }
+}
+
+/* Large screens */
+@media (min-height: 800px) {
+  .omni {
+    width: 65vmin;
+    height: 65vmin;
+  }
 }
