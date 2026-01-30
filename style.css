@@ -34,7 +34,7 @@ body{
   inset: 0;
   border-radius:50%;
 
-  background-image: url("icones_15_Rotados.png");
+  background-image: url("./images/icones_15_Rotados.png");
   background-repeat: no-repeat;
   background-position: 52.5% 53%;/* Ajuste fino do centro visual do PNG (imagem não é perfeitamente centrada) */
 
@@ -205,7 +205,7 @@ mask: linear-gradient(
 .omni-bg{
   position: absolute;
   inset: 0;
-  background-image: url("omnitrix_de_frente.png");
+  background-image: url("./images/omnitrix_de_frente.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain; /* depois ajustamos */

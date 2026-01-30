@@ -26,7 +26,7 @@ const ALIEN_NAMES = [
 // CONFIG
 const N = 15;                 // número de aliens
 const STEP = 360 / N;         // graus por alien
-const SENS = 0.45;            // graus por pixel (ajuste fino)
+const SENS = 0.90;            // graus por pixel (ajuste fino)
 
 let isDown = false;
 let startY = 0;
