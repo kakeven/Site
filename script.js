@@ -3,6 +3,7 @@ const dial = document.getElementById("dial");
 const touch = document.getElementById("touch");
 const statusEl = document.getElementById("status");
 const INDEX_OFFSET = 0; // ajuste depois: 1, 2, 3... até bater
+let transformed = false;
 
 const ALIEN_NAMES = [
   "Massa Cinzenta",
@@ -63,9 +64,17 @@ function snapToNearest(){
 
 
 touch.addEventListener("pointerdown", (e) => {
+  if (transformed) {
+    transformed = false;
+    hasSelection = false;
+    omni.classList.remove("selected");
+    setStatus("Arraste para escolher…");
+    return;
+  }
   // Se já está selecionado, um toque vira “transformar”
   if (hasSelection && !isDown) {
     setStatus(`TRANSFORMAÇÃO: ${ALIEN_NAMES[selectedIndex]}`);
+    transformed = true;
     // aqui depois você dispara animação / troca de tela / etc
     return;
   }
