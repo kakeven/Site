@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Kauã — Dev"
+    "title": "Kauã Dev"
   },
   "nav": {
     "logo": "K.DEV",
@@ -37,7 +37,7 @@
     "sectionNum": "01",
     "title": "Sobre mim",
     "paragraphsHtml": [
-      "Estudante de <span>Engenharia de Software</span> no 5° semestre, baseado no Ceará. Apaixonado por construir sistemas bem estruturados e escaláveis.",
+      "Estudante de <span>Engenharia de Software</span> no 5° semestre, no Ceará. Apaixonado por construir sistemas bem estruturados e escaláveis.",
       "Atualmente buscando minha primeira oportunidade como <span>estagiário ou dev júnior</span>, com foco em back-end e arquitetura de APIs REST.",
       "Nas horas vagas, exploro LLMs e inteligência artificial, sempre curioso sobre como a tecnologia pode resolver problemas reais."
     ],
