@@ -1,0 +1,74 @@
+[
+  {
+    "id": "serviceflow",
+    "num": "001",
+    "title": "ServiceFlow",
+    "desc": "API de agendamento com autenticação/roles e regras de negócio para evitar conflitos. Foquei em segurança (JWT + BCrypt) e validação no back-end para garantir integridade do calendário e acesso por perfil.",
+    "tags": [
+      "Java",
+      "Spring Boot",
+      "Spring Security",
+      "JWT",
+      "BCrypt",
+      "PostgreSQL",
+      "REST API",
+      "Maven"
+    ],
+    "features": [
+      "Autenticação com JWT e BCrypt — senhas hasheadas, tokens stateless com expiração configurável",
+      "Controle de acesso por roles (ADMIN, PROVIDER, CLIENT) via Spring Security",
+      "Detecção de conflitos de horário — validação de sobreposição de agendamentos no back-end",
+      "Endpoints RESTful documentados, separação clara de responsabilidades por camadas",
+      "Configuração de CORS e filtros de segurança customizados"
+    ],
+    "github": "https://github.com/kaua",
+    "demo": null
+  },
+  {
+    "id": "datapulse",
+    "num": "002",
+    "title": "DataPulse",
+    "desc": "Plataforma de monitoramento com pipeline assíncrono. Usei Celery + Redis para desacoplar coleta/processamento e reduzir latência percebida: a API responde rápido enquanto jobs processam métricas e disparam alertas por regras.",
+    "tags": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "SQLAlchemy",
+      "Celery",
+      "Redis",
+      "Docker Compose",
+      "Pytest"
+    ],
+    "features": [
+      "Coleta assíncrona de métricas com Celery + Redis como message broker",
+      "API REST com FastAPI — alta performance, tipagem com Pydantic",
+      "Regras de alerta configuráveis por threshold, frequência e canal de notificação",
+      "Containerização completa com Docker Compose (app, postgres, redis)",
+      "Testes automatizados com Pytest cobrindo serviços e endpoints principais"
+    ],
+    "github": "https://github.com/kaua",
+    "demo": null
+  },
+  {
+    "id": "portfolio",
+    "num": "003",
+    "title": "Portfólio",
+    "desc": "Portfólio “Onyx” em HTML/CSS/JS puro, com tokens de design, modal de projetos e animações leves por IntersectionObserver. A meta é performance e controle criativo sem dependências.",
+    "tags": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Design System",
+      "Responsive"
+    ],
+    "features": [
+      "Design system com CSS custom properties — paleta, tipografia e espaçamento coerentes",
+      "Animações de entrada com IntersectionObserver — sem bibliotecas externas",
+      "Layout responsivo para mobile e desktop sem frameworks CSS",
+      "Noise texture overlay e efeitos de glow via SVG e gradientes puros",
+      "Nav com scroll detection e backdrop blur para contraste dinâmico"
+    ],
+    "github": "https://github.com/kaua",
+    "demo": null
+  }
+]

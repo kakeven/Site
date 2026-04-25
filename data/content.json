@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "title": "Kauã — Dev"
+  },
+  "nav": {
+    "logo": "K.DEV",
+    "links": [
+      { "href": "#about", "label": "Sobre" },
+      { "href": "#projects", "label": "Projetos" },
+      { "href": "#contact", "label": "Contato" }
+    ]
+  },
+  "hero": {
+    "tag": "Disponível para estágio",
+    "headlineHtml": "Kauã<br/><span class=\"line2\">Dev.</span>",
+    "desc": "Desenvolvedor back-end em formação, construindo sistemas robustos com Python, FastAPI e boas práticas de engenharia de software.",
+    "actions": [
+      { "variant": "primary", "href": "#projects", "label": "Ver projetos →" },
+      { "variant": "ghost", "href": "#contact", "label": "Entrar em contato" }
+    ],
+    "stats": [
+      { "label": "Semestre atual", "value": "5°" },
+      { "label": "Projetos no portfólio", "value": "03" },
+      {
+        "label": "Localização",
+        "value": "Ceará, BR",
+        "valueStyle": "font-size:1rem; letter-spacing:0;"
+      },
+      {
+        "label": "Stack principal",
+        "value": "Python · FastAPI",
+        "valueStyle": "font-size:1rem; letter-spacing:0;"
+      }
+    ]
+  },
+  "about": {
+    "sectionNum": "01",
+    "title": "Sobre mim",
+    "paragraphsHtml": [
+      "Estudante de <span>Engenharia de Software</span> no 5° semestre, baseado no Ceará. Apaixonado por construir sistemas bem estruturados e escaláveis.",
+      "Atualmente buscando minha primeira oportunidade como <span>estagiário ou dev júnior</span>, com foco em back-end e arquitetura de APIs REST.",
+      "Nas horas vagas, exploro LLMs e inteligência artificial, sempre curioso sobre como a tecnologia pode resolver problemas reais."
+    ],
+    "skills": [
+      "Java",
+      "Spring Boot",
+      "JWT / Auth",
+      "PostgreSQL",
+      "Docker",
+      "Python",
+      "REST APIs",
+      "FastAPI",
+      "Git / GitHub",
+      "Pytest",
+      "SQLAlchemy",
+      "HTML5 / CSS3"
+    ]
+  },
+  "projects": {
+    "sectionNum": "02",
+    "title": "Projetos"
+  },
+  "contact": {
+    "sectionNum": "03",
+    "headlineHtml": "Vamos <em>trabalhar</em> juntos?",
+    "desc": "Aberto a estágios, freelas e oportunidades júnior. Se tiver um projeto interessante ou uma vaga, me chama.",
+    "links": [
+      {
+        "label": "Email",
+        "value": "kevsnsilba@gmail.com",
+        "href": "mailto:kevsnsilba@gmail.com"
+      },
+      {
+        "label": "LinkedIn",
+        "value": "linkedin.com/in/kakeven",
+        "href": "https://linkedin.com/in/kakeven"
+      },
+      {
+        "label": "GitHub",
+        "value": "github.com/kakeven",
+        "href": "https://github.com/kakeven"
+      }
+    ]
+  },
+  "footer": {
+    "left": "© 2025 — Kauã",
+    "right": "Ceará, Brasil · Disponível para estágio"
+  }
+}
+

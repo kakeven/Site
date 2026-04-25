@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arquitetura — Portfólio Onyx</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=DM+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/tokens.css" />
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/layout.css" />
+    <link rel="stylesheet" href="./styles/components.css" />
+    <style>
+      main {
+        padding: 128px 64px 64px;
+        max-width: 920px;
+        margin: 0 auto;
+      }
+      h1 {
+        font-size: clamp(2.2rem, 4vw, 3.2rem);
+        font-weight: 600;
+        letter-spacing: -0.03em;
+        margin-bottom: 16px;
+        opacity: 1;
+        animation: none;
+      }
+      h2 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        margin-top: 40px;
+        margin-bottom: 12px;
+      }
+      p,
+      li {
+        color: var(--muted);
+        line-height: 1.8;
+        font-size: 1rem;
+      }
+      code {
+        font-family: var(--font-mono);
+        font-size: 0.9em;
+        color: var(--text);
+      }
+      .card {
+        background: var(--surface-2);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        padding: 24px;
+        margin-top: 16px;
+      }
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      @media (max-width: 900px) {
+        main {
+          padding: 104px 32px 64px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="nav" class="scrolled">
+      <span class="nav-logo">K.DEV</span>
+      <ul class="nav-links">
+        <li><a href="./index.html">Voltar</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1>Arquitetura</h1>
+      <p>
+        Esta página existe para explicar decisões do portfólio: por que
+        <code>HTML/CSS/JS</code> puro, como o design system funciona e como as
+        interações (modal e animações) foram implementadas com foco em
+        performance e controle.
+      </p>
+
+      <h2>Estrutura</h2>
+      <div class="card">
+        <ul>
+          <li><code>index.html</code>: conteúdo e marcação.</li>
+          <li><code>styles/tokens.css</code>: cores, spacing e radius (fonte da verdade).</li>
+          <li><code>styles/base.css</code>: reset e base (inclui noise overlay).</li>
+          <li><code>styles/layout.css</code>: grids, seções e responsivo.</li>
+          <li><code>styles/components.css</code>: botões, tags, cards e modal.</li>
+          <li><code>scripts/main.js</code>: navegação, reveal e modal.</li>
+        </ul>
+      </div>
+
+      <h2>Design tokens (Onyx)</h2>
+      <div class="card">
+        <p>
+          Tokens centralizam a identidade visual: primary <code>#244f87</code>,
+          background <code>#0e0e0f</code> e “tonal layers” para elevação sem
+          sombras pesadas.
+        </p>
+      </div>
+
+      <h2>Interações</h2>
+      <div class="card">
+        <p>
+          O <strong>modal</strong> é controlado por classes e render helpers no
+          JS. O <strong>reveal</strong> usa <code>IntersectionObserver</code> e
+          uma função genérica para reaproveitar animações sem dependências.
+        </p>
+      </div>
+
+      <p style="margin-top: 40px">
+        Dica: você pode manter esta página “oculta” e compartilhar só quando
+        fizer sentido (por exemplo, em entrevistas). Link:
+        <a href="./architecture.html"><code>architecture.html</code></a>
+      </p>
+    </main>
+  </body>
+</html>
+

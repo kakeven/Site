@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kauã — Dev</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=DM+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/tokens.css" />
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/layout.css" />
+    <link rel="stylesheet" href="./styles/components.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav id="nav">
+      <span class="nav-logo" id="nav-logo">K.DEV</span>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#projects">Projetos</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-left">
+        <div class="hero-tag" id="hero-tag">Disponível para estágio</div>
+        <h1 id="hero-headline">
+          Kauã<br />
+          <span class="line2">Dev.</span>
+        </h1>
+        <p class="hero-desc" id="hero-desc">
+          Desenvolvedor back-end em formação, construindo sistemas robustos com
+          Java, Spring Boot e boas práticas de engenharia de software.
+        </p>
+        <div class="hero-actions" id="hero-actions">
+          <a class="btn-primary" href="#projects">Ver projetos →</a>
+          <a class="btn-ghost" href="#contact">Entrar em contato</a>
+        </div>
+      </div>
+      <div class="hero-right" id="hero-stats">
+        <div class="stat-card">
+          <span class="stat-label">Semestre atual</span>
+          <span class="stat-value">5°</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Projetos no portfólio</span>
+          <span class="stat-value">03</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Localização</span>
+          <span class="stat-value" style="font-size: 1rem; letter-spacing: 0"
+            >Ceará, BR</span
+          >
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Stack principal</span>
+          <span class="stat-value" style="font-size: 1rem; letter-spacing: 0"
+            >Java · Spring</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="section-header reveal">
+        <span class="section-num" id="about-num">01</span>
+        <h2 class="section-title" id="about-title">Sobre mim</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal" id="about-text">
+          <p>
+            Estudante de <span>Engenharia de Software</span> no 5° semestre,
+            baseado no Ceará. Apaixonado por construir sistemas bem estruturados
+            e escaláveis.
+          </p>
+        </div>
+        <div class="skills-grid reveal" id="skills-grid"></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="section-header reveal">
+        <span class="section-num" id="projects-num">02</span>
+        <h2 class="section-title" id="projects-title">Projetos</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="projects-list reveal" id="projects-list"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="contact-inner">
+        <div class="contact-cta reveal">
+          <div class="section-header" style="margin-bottom: 28px">
+            <span class="section-num" id="contact-num">03</span>
+            <div class="section-line"></div>
+          </div>
+          <h2 id="contact-title">Vamos <em>trabalhar</em> juntos?</h2>
+          <p id="contact-desc">
+            Aberto a estágios, freelas e oportunidades júnior. Se tiver um
+            projeto interessante ou uma vaga, me chama.
+          </p>
+        </div>
+        <div class="contact-links reveal" id="contact-links"></div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p id="footer-left">© 2025 — Kauã</p>
+      <p id="footer-right">Ceará, Brasil · Disponível para estágio</p>
+    </footer>
+
+    <!-- MODAL -->
+    <div class="modal-overlay" id="modal-overlay">
+      <div class="modal" id="modal">
+        <div class="modal-header">
+          <div class="modal-header-left">
+            <div class="modal-num" id="modal-num"></div>
+            <div class="modal-title" id="modal-title"></div>
+          </div>
+          <button class="modal-close" id="modal-close">ESC ✕</button>
+        </div>
+        <div class="modal-body">
+          <p class="modal-desc" id="modal-desc"></p>
+          <div class="modal-section-label">Tecnologias</div>
+          <div class="modal-tags" id="modal-tags"></div>
+          <div class="modal-section-label">Destaques</div>
+          <div class="modal-features" id="modal-features"></div>
+          <div class="modal-actions" id="modal-actions"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
