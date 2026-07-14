@@ -22,34 +22,44 @@
     "github": "https://github.com/kakeven/Site",
     "demo": null
   },
-  {
-    "id": "taskflow",
-    "num": "002",
-    "title": "TaskFlow",
-    "desc": "API REST para gerenciamento de tarefas com regras de produtividade embutidas. Além do CRUD, impõe limites inteligentes (tarefas ativas, prioridades e bloqueios por atraso), garantindo controle real de carga de trabalho e não só organização superficial.",
-    "tags": [
-      "Python",
-      "FastAPI",
-      "PostgreSQL",
-      "SQLite",
-      "SQLAlchemy",
-      "Pydantic",
-      "JWT",
-      "Docker",
-      "Pytest"
-    ],
-    "features": [
-      "CRUD completo de tarefas com autenticação via JWT",
-      "Sistema de regras de negócio: limite de tarefas ativas e restrição de prioridades HIGH",
-      "Bloqueio automático de criação ao acumular tarefas vencidas",
-      "Validação robusta com Pydantic garantindo integridade dos dados",
-      "Arquitetura em camadas (router → service → model) separando responsabilidades",
-      "Isolamento por usuário: cada usuário acessa apenas seus próprios dados",
-      "Documentação automática com Swagger (OpenAPI)",
-      "Testes automatizados cobrindo regras críticas e endpoints principais"
-    ],
-    "github": "https://github.com/kakeven/TaskFlow",
-    "demo": null
+ {
+  "id": "taskflow",
+  "num": "002",
+  "title": "TaskFlow",
+  "desc": "Sistema fullstack para gerenciamento de tarefas e projetos com regras de produtividade embutidas. Além do CRUD, impõe limites inteligentes (tarefas ativas, prioridades e bloqueios por atraso), garantindo controle real de carga de trabalho e não só organização superficial. Composto por API REST, frontend web e app desktop.",
+  "tags": [
+    "Python",
+    "FastAPI",
+    "PostgreSQL",
+    "SQLAlchemy",
+    "Pydantic",
+    "JWT",
+    "Docker",
+    "Pytest",
+    "JavaScript",
+    "Bootstrap",
+    "Tauri",
+    "Rust"
+  ],
+  "features": [
+    "CRUD completo de tarefas e projetos com autenticação via JWT",
+    "Sistema de regras de negócio: limite de tarefas ativas e restrição de prioridades HIGH",
+    "Bloqueio automático de criação ao acumular tarefas vencidas",
+    "Validação robusta com Pydantic garantindo integridade dos dados",
+    "Arquitetura em camadas (router → service → model) separando responsabilidades",
+    "Isolamento por usuário: cada usuário acessa apenas seus próprios dados",
+    "Frontend web (JS Vanilla + Bootstrap) com dashboard, gestão de projetos e importação de tarefas via JSON",
+    "Aplicativo desktop multiplataforma (Tauri) com tema escuro e importação via JSON",
+    "Documentação automática com Swagger (OpenAPI)",
+    "Testes automatizados cobrindo regras críticas e endpoints principais"
+  ],
+  "repos": {
+    "api": "https://github.com/kakeven/TaskFlow-API",
+    "frontend": "https://github.com/kakeven/TaskFlow-Frontend",
+    "desktop": "https://github.com/kakeven/taskflow-desktop"
+  },
+  "github": "https://github.com/kakeven/TaskFlow-API",
+  "demo": "https://taskflow-nnno.onrender.com/docs"
   },
   {
     "id": "agenda-digital",
@@ -75,7 +85,35 @@
       "Geração de dados aleatórios para testes e simulação de uso"
     ],
     "github": "https://github.com/kakeven/Agenda-Digital"
-  }
+  },
+  {
+  "id": "passworld",
+  "num": "004",
+  "title": "PassWorld",
+  "desc": "Gerenciador de senhas local com criptografia moderna, autenticação baseada em sessão e versão desktop nativa. Em vez de banco de dados tradicional, armazena as credenciais em um arquivo .vault criptografado, protegido por uma senha mestra que nunca é salva em disco.",
+  "tags": [
+    "Python",
+    "FastAPI",
+    "Vue 3",
+    "Vite",
+    "Electron",
+    "Argon2id",
+    "AES-256-GCM",
+    "JWT"
+  ],
+  "features": [
+    "Criptografia do vault com AES-256-GCM e derivação de chave via Argon2id",
+    "Senha mestra nunca é armazenada em disco",
+    "CRUD completo de credenciais via API REST",
+    "Gerador de senhas fortes configurável",
+    "Autenticação por token com expiração automática de sessão",
+    "Escrita atômica no arquivo .vault para evitar corrupção de dados",
+    "Versão desktop empacotada com Electron (executável .exe standalone para Windows)",
+    "Arquitetura de dois processos no Electron (main e renderer) com backend FastAPI rodando localmente"
+  ],
+  "github": "https://github.com/kakeven/Passworld",
+  "demo": null
+}
 
 
 
